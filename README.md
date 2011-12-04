@@ -37,6 +37,10 @@ Use braces even with single line blocks.
     if (true){
       alert( {a: 'a'});
     }
+    if (true)
+    {
+      alert( {a: 'a'});
+    }
 
 ## Object definition braces
 An object that cannot be defined inline, will be defined after a breaking brace,  
@@ -137,6 +141,8 @@ Classes are capitalized, and constants are uppercase.
     CONST_VALUE = 10;
 
 # Now code!
+## "use strict" and use JShint/JSlint
+
 ## Global namespace
 The less global variables, the better. Your goal should be 0.
 
@@ -211,6 +217,12 @@ existance "variable" in object
 ## RegExp
 No more 'string'.match().  
 Use only RE.test() and RE.exec().
+
+## Libraries/frameworks
+* [underscore.js](https://github.com/documentcloud/underscore)
+* [jQuery](http://github/jquery/jquery)
+* [JSON](https://github.com/douglascrockford/JSON-js)
+* ...
 
 # Document and don't comment!
 Never document obvious code. It will make your work even more unreadable.  

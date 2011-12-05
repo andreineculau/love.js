@@ -91,17 +91,32 @@ They always come last, never start a new line with one.
 Declare your variables at the top of your code, except for function expressions.  
 Try to Use one line per variable, but you're the better judge.  
 For consistency, leave the keyword var on its own line.
+Indent and linebreak in a useful / readable way.
+Assignment in the same statement as variable declaration is sometimes more readable.
 
     // YES
-    var
-    a,
-    b = 5;
-
-    // NO
     var a,
-        b = 5;
+        b = 5,
+        c;
+    
+    // YES
+    var 
+    a, b, c;
+    
+    b = 5
+    
+    // MAYBE
+    var a, b, c;
+    
+    b = 5;
+    
+    // NO
+    var a, b = 5, c; // (hard to spot the assignment)
+    
+    // NO
     var a;
     var b = 5;
+    var c;
 
 ## Single quotes vs double quotes
 Preferrably use single quotes.  

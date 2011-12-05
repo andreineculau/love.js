@@ -104,16 +104,15 @@ For consistency, leave the keyword var on its own line.
     var b = 5;
 
 ## Single quotes vs double quotes
-Use single quotes.  
+Preferrably use single quotes.  
 If you have an English 'I'm' then just escape it: 'I\'m'.  
-If you have plenty of escapings, then decide yourself if you want to switch  
-to double quotes: "I'm ready, ma'am!".
+If your string would need plenty of escaped single quotes, consider using double quotes: "I'm ready, ma'am!".  
 
 ## Semicolons
 Always use semicolons.
 
     // YES
-    x = x + 1;
+    x += 1;
     return x;
 
     // NO
@@ -123,22 +122,22 @@ Always use semicolons.
 ## Readable arithmetics
 Instead of 86400000 (a day in miliseconds),  
 break it down to 24 * 60 * 60 * 1000.  
-Stop using ++i. Keep to i++, or even i = i + 1.
+Stop using ++i. Keep to i++, i += 1 or even i = i + 1.
 
 ## Naming convention
 underscore. Take it or leave it!  
 ~ "It is no measure of health to be well adjusted to a profoundly sick society."
 
-Make use of prefixes (eg. has_, is_) and suffixes (eg. _count)
+Make use of prefixes (eg. has\_, is\_) and suffixes (eg. \_count)
 
 Functions (which should always be function expressions) and variables will use  
-lowercase underscore notation.  
-Classes are capitalized, and constants are uppercase.
+lowercase underscore notation.  [I thought the majority vote so far was to use camelCase? / I]
+Classes are capitalized and camelCased, and constants are uppercase.
 
     // YES
-    var always_underscore = new Base_class();
+    var always_underscore = new BaseClass();
     var always_and_forever = function() {...};
-    CONST_VALUE = 10;
+    var CONST_VALUE = 10;
 
 # Now code!
 ## "use strict" and use JShint/JSlint
@@ -161,7 +160,9 @@ You can use == only when checking against null.
 
     // NO
     if (a == 1) {...}
-    if (a) {...}
+
+    // MAYBE
+    if (a) {...} // I love this, it's compact and readable, what's wrong with it? :) / Isak
 
 ## else, else if, catch
 "else" "else if", or "catch(e)" will stay on the same line  
@@ -183,10 +184,10 @@ Otherwise, just declare variables before the for loop.
 
     // NO
     for (var...) {...}
-    for (i = 0; i < s.length; i++) {...}
+    for (i = 0; i < s.length; i++) {...} // Actually it doesn't seem to matter if you do it like this, as long as s.length is not changed in the loop. The browser probably optimizes for you, just like it does with i++.
 
 ## DOM repaints
-Try to change the DOM as few as possible  
+Try to change the DOM as few times as possible  
 (eg. build the whole HTML before inserting it).
 
     // YES
@@ -216,12 +217,12 @@ existance "variable" in object
 
 ## RegExp
 No more 'string'.match().  
-Use only RE.test() and RE.exec().
+Use only RE.test() and RE.exec(). // What's the reason for this? / I
 
 ## Libraries/frameworks
 * [underscore.js](https://github.com/documentcloud/underscore)
 * [jQuery](http://github/jquery/jquery)
-* [JSON](https://github.com/douglascrockford/JSON-js)
+* [JSON](https://github.com/douglascrockford/JSON-js) // Should be JSON2.js?
 * ...
 
 # Document and don't comment!
@@ -231,7 +232,11 @@ So either go with JSDoc or with single line comments. No /*...*/
 
 ## JSDoc
 ### Functions
-Each function should have a JSDoc heading.  
+All public module functions must have a good JSDoc heading.
+A really tiny private function, or internal helper function in some other
+function, might omit the JSDoc heading, if the naming makes it self-documenting
+and additional comments would just be superfluous and clutter the code.
+    
 // TODO
 
 ### Variables

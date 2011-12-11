@@ -148,6 +148,37 @@ Instead of 86400000 (a day in miliseconds),
 break it down to 24 * 60 * 60 * 1000.  
 Stop using ++i. Keep to i++, i += 1 or even i = i + 1.
 
+## Comparisons
+Always use the === equality and !== inequality operators.  
+You can use == only when checking against null.
+
+    // YES
+    if (a === '1') {...}
+
+    // NO
+    if (a == 1) {...}
+
+    // MAYBE
+    if (a) {...} // I love this, it's compact and readable, what's wrong with it? :) / Isak
+
+## Operator precedence, return
+Don't assume operator precedence, enforce it with round brackets.  
+Even if you get it right, you are most definitely hindering readability.  
+Also, when returning expressions,
+make sure you wrap the expression with round brackets.
+
+    // YES
+    var a = a || (b ? 1 : (b || c));
+    return (a && b);
+    
+    // NO
+    var a = a || b ? 1 : b || c;
+    return a && b;
+
+## else, else if, catch
+"else", "else if", or "catch(e)" will stay on the same line  
+with the closing and the opening brace.
+
 ## Naming convention
 <!-- I thought the majority vote so far was to use camelCase? / Isak -->
 <!-- Klarna's guidelines might follow love.js 99%,
@@ -178,23 +209,6 @@ The less global variables, the better. Your goal should be 0.
       var a = 2;
       var b =
     })();
-
-## Comparisons
-Always use the === equality and !== inequality operators.  
-You can use == only when checking against null.
-
-    // YES
-    if (a === '1') {...}
-
-    // NO
-    if (a == 1) {...}
-
-    // MAYBE
-    if (a) {...} // I love this, it's compact and readable, what's wrong with it? :) / Isak
-
-## else, else if, catch
-"else", "else if", or "catch(e)" will stay on the same line  
-with the closing and the opening brace.
 
 ## Loops
 If order doesn't matter, just parse in reverse with a while loop.  
@@ -297,4 +311,5 @@ http://dev.opera.com/articles/view/efficient-javascript/
 
 http://mislav.uniqpath.com/2010/05/semicolons/ v  
 http://whathecode.wordpress.com/2011/02/10/camelcase-vs-underscores-scientific-showdown/ v  
-http://www.koonsolo.com/news/dewitters-tao-of-coding/ v
+http://www.koonsolo.com/news/dewitters-tao-of-coding/ v  
+http://www.youtube.com/watch?v=taaEzHI9xyY

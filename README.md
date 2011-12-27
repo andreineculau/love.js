@@ -312,4 +312,7 @@ http://dev.opera.com/articles/view/efficient-javascript/
 http://mislav.uniqpath.com/2010/05/semicolons/ v  
 http://whathecode.wordpress.com/2011/02/10/camelcase-vs-underscores-scientific-showdown/ v  
 http://www.koonsolo.com/news/dewitters-tao-of-coding/ v  
-http://www.youtube.com/watch?v=taaEzHI9xyY
+http://www.youtube.com/watch?v=taaEzHI9xyY  
+https://developer.mozilla.org/En/Mozilla_Coding_Style_Guide  
+http://wiki.sproutcore.com/w/page/12412942/JavaScript%20Style%20Guide  
+https://github.com/unboxed/Javascript-Style-Guide  

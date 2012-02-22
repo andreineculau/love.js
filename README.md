@@ -316,17 +316,20 @@ Try to change the DOM as few times as possible
     }
 
 ## Type checks
-String: typeof object === 'string'  
-Number: typeof object === 'number'  
-Boolean: typeof object === 'boolean'  
-Object: typeof object === 'object'  
-Function: typof object === 'function' or better jQuery.isFunction(object)  
-Array: object instanceof Array or better jQuery.isArray(object)  
-Element: object.nodeType  
-null: object === null  
-null or undefined: object == null  
-undefined: typeof variable === "undefined"  
-existance "variable" in object
+Read http://javascriptweblog.wordpress.com/2011/08/08/fixing-the-javascript-typeof-operator/  
+and http://perfectionkills.com/instanceof-considered-harmful-or-how-to-write-a-robust-isarray/  
+and other literature.
+
+Don't use instanceof, and also not typeof.  
+Instead create your own type-checking function.
+
+Example:
+
+    function(obj) {
+        return (obj === null || obj === undefined ?
+                String(obj) :
+                Object.prototype.toString.call(obj).slice(8, -1).toLowerCase() || 'object');
+    }
 
 ## Type coercion
 
@@ -405,3 +408,4 @@ http://www.martinrinehart.com/articles/javascript-conventions.html
 v http://nodeguide.com/style.html  
 http://www.klauskomenda.com/code/my-javascript-coding-guidelines-and-standards/  
 http://addyosmani.com/resources/essentialjsdesignpatterns/book/?utm_source=javascriptweekly&utm_medium=email  
+http://homepage.mac.com/rue/JS_Optimization_Techniques/  

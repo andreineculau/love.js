@@ -409,3 +409,4 @@ v http://nodeguide.com/style.html
 http://www.klauskomenda.com/code/my-javascript-coding-guidelines-and-standards/  
 http://addyosmani.com/resources/essentialjsdesignpatterns/book/?utm_source=javascriptweekly&utm_medium=email  
 http://homepage.mac.com/rue/JS_Optimization_Techniques/  
+https://github.com/polarmobile/coffeescript-style-guide  

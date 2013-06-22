@@ -410,3 +410,29 @@ http://www.klauskomenda.com/code/my-javascript-coding-guidelines-and-standards/
 http://addyosmani.com/resources/essentialjsdesignpatterns/book/?utm_source=javascriptweekly&utm_medium=email  
 http://homepage.mac.com/rue/JS_Optimization_Techniques/  
 https://github.com/polarmobile/coffeescript-style-guide  
+http://dublintech.blogspot.co.uk/2012/04/javascript-language-z-cheat-sheet.html  
+http://anders.janmyr.com/2012/03/braceless-programming.html  
+https://github.com/walmartlabs/hapi/blob/master/docs/Style.md  
+http://markdaggett.com/blog/2013/02/15/pragmatic-javascript-style/  
+https://github.com/airbnb/javascript#in-the-wild  
+http://www.smashingmagazine.com/2012/10/25/why-coding-style-matters/
+
+# Tools
+http://esprima.org/index.html  
+http://learnjs.info/#mode=edit  
+http://jsbeautifier.org/  
+http://www.jshint.com/  
+https://github.com/douglascrockford/JSON-js  
+http://bestiejs.github.com/json3  
+http://code.google.com/p/phantomjs/  
+http://nodejs.org/  
+
+
+# Conferences
+http://gotocon.com/  
+http://fluentconf.com/fluent2012  
+http://2012.jsday.it/  
+http://www.jseverywhere.org/  
+http://events.jquery.org/2012/sf/  
+http://javascriptweekly.com/summit/  
+http://www.jsconf.com.ar/  

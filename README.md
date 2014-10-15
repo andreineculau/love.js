@@ -415,7 +415,8 @@ http://anders.janmyr.com/2012/03/braceless-programming.html
 https://github.com/walmartlabs/hapi/blob/master/docs/Style.md  
 http://markdaggett.com/blog/2013/02/15/pragmatic-javascript-style/  
 https://github.com/airbnb/javascript#in-the-wild  
-http://www.smashingmagazine.com/2012/10/25/why-coding-style-matters/
+http://www.smashingmagazine.com/2012/10/25/why-coding-style-matters/  
+https://github.com/RisingStack/node-style-guide
 
 # Tools
 http://esprima.org/index.html  
